@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="books">
+<head>
+    <link rel="shortcut icon" href="images/notebook.png" />
+  <title>Collection of knowledge </title>  
+     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+    <script src="bower_components/jquery/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+</head>
+<body>
+    <div class="container" ng-controller="mainCtrl">
+        <div ng-include="headerTemplate"></div>
+        <div ng-include="templateUrl"></div>
+    </div>
+    <!-- Home module-->
+    <script src="app/home/home.js"></script>
+    <script src="app/home/homeCtrl.js"></script>
+    <!-- end of home module-->
+    
+    <!-- products module-->
+    <script src="app/products/products.js"></script>
+    <script src="app/products/productsSvc.js"></script>
+    <!-- end of products module-->
+    
+    <!--login module-->
+    <script src="app/login/login.js"></script>
+    <script src="app/login/loginCtrl.js"></script>
+    <script src="app/login/authenticateSvc.js"></script>
+    <!-- end of login module-->
+    
+    <!-- register module-->
+    <script src="app/register/register.js"></script>
+    <script src="app/register/registerCtrl.js"></script>
+    <!-- end of register module-->
+    
+    <!-- components module-->
+    <script src="app/components/components.js"></script>
+    <script src="app/components/rangeFilter.js"></script>
+    <!-- end of components module-->
+    
+    <!--app.JS file starting-->
+    <script src="app/app.js"></script>
+    <script src="app/common/mainCtrl.js"></script>
+    <!-- app.js ending-->
+    
+</body>
+</html>

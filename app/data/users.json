@@ -1,0 +1,15 @@
+{
+    "users": [
+        {
+            "username": "bhavya",
+            "password": "bhavya@123",
+            "firstName": "bhavya",
+            "lastName": "bhargavi"
+            },
+        {
+            "username": "bhargavi",
+            "password": "bhargavi@1234",
+            "firstName": "bhargavi",
+            "lastName": "R"
+            }]
+}
