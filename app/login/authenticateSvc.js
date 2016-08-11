@@ -1,8 +1,8 @@
 angular.module("login")
-    .service("authenticateSvc", "$http", "$q", function($http, $q){
+    .service("authenticateSvc", ["$http", "$q", function($http, $q){
      var authenticate = function(users, user){
          angular.forEach(users, function(item){
-             if(item.userName == user.userName && item.password == user.password){
+             if(item.username == user.username && item.password == user.password){
                  security.isAuthenticated=true;
                  security.userDetails.firstName=item.firstName;
                  security.userDetails.lastName=item.lastName;
@@ -18,7 +18,7 @@ angular.module("login")
      }
      };
      
-     this.loginUser = function (user) {
+      this.loginUser = function (user) {
             var dfd = $q.defer();
             $http.get("app/data/users.json")
                 .then(function (response) {
@@ -39,4 +39,4 @@ angular.module("login")
       this.authenticateDetails = function(){
           return security;
       }          
-})
+}]);

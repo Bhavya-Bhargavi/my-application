@@ -986,7 +986,8 @@ $scope.countries = [
                 "code": "ZW"
             }
 ];
-        var states = [{
+        var states = [
+            {
                 "countrycode": "IN",
                 "statename": "Telangana",
                 "statecode": "TG"

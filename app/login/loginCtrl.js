@@ -1,23 +1,21 @@
 angular.module("login")
-    .controller("loginCtrl",["$rootScope", "$authenticateSvc", function ($rootScope, authenticateSvc ) {
-        //didnt inject scope this is called aliasing
-                
+    .controller("loginCtrl", ["$rootScope", "authenticateSvc", function ($rootScope, authenticateSvc) {
         this.loginData = {
-            userName:"",
-            password:""
+            username: "",
+            password: ""
         };
-        this.loginUser = function(){
+        this.loginUser = function () {
             authenticateSvc.loginUser(this.loginData)
-            .then(function(response){
-                var security = response;
-                if(security.isAuthenticated){
-                $rootscope.$broadcast("user-loggedIn");
-            }
-                else{
-                    this.showInvalidCredentials = true;
-                }
-    }).catch(function(error, data){
-             console.log(error);
-         }) ;
-                  }        
-    }]);
+                .then(function (response) {
+                    var security = response;
+                    if (security.isAuthenticated) {
+                        $rootScope.$broadcast("USER-LOGGEDIN");
+                    } else {
+                        this.showInvalidCredentials = true;
+                    }
+                }).catch(function (errorResponse, data) {
+                    console.log(errorResponse);
+                });
+
+        };
+}]);
